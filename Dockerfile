@@ -4,7 +4,8 @@ RUN apt-get update -y
 RUN apt install libgl1-mesa-glx -y
 RUN apt-get install 'ffmpeg'\
     'libsm6'\
-    'libxext6'  -y
+    'wget'\
+    'libxext6'  -y\
 
 
 COPY requirements.txt .
