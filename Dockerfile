@@ -1,4 +1,4 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
+FROM python:3.8-slim-buster
 
 RUN apt-get update -y
 RUN apt install libgl1-mesa-glx -y

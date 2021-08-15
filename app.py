@@ -3,6 +3,8 @@ from PIL import Image
 from detector import detect_objects
 
 def object_main():
+    st.set_option('deprecation.showPyplotGlobalUse', False)
+
 
     st.title("YOLOv3 Object Detection")
     introduction = open("intro.txt", "r")
