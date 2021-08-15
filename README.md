@@ -1,5 +1,7 @@
 # yolo-service
-Yolo in streamlit service 
+Yolo in streamlit service.
+
+Demo: yolo.salmanhiro.website
 
 
 # How to build
