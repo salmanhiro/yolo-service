@@ -6,13 +6,13 @@ Yolo in streamlit service
 
 ## Using docker
 
-`docker build -t yolo-service .`
-`docker run -dp 8501:8501 yolo-service`
+1. `docker build -t yolo-service .`
+2. `docker run -dp 8501:8501 yolo-service`
 
 ## Directly
 
-Download the weight file from https://pjreddie.com/media/files/yolov3.weights and put under the model folder. 
-run `streamlit run app.py`
+1. Download the weight file from https://pjreddie.com/media/files/yolov3.weights and put under the model folder. 
+2. Then run `streamlit run app.py`
 
 References: 
 ```
