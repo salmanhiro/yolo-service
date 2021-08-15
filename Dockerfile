@@ -1,7 +1,7 @@
 FROM python:3.8-slim-buster
 
 RUN apt-get update -y
-RUN apt install libgl1-mesa-glx wget -y
+RUN apt install libgl1-mesa-glx wget libglib2.0-0 -y
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
