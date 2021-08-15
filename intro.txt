@@ -1,0 +1,9 @@
+You only look once (YOLO) is a state-of-the-art, real-time object detection system
+
+YOLOv3 is a good detector. It’s fast, it’s accurate. It’s
+not as great on the COCO average AP between .5 and .95
+IOU metric. But it’s very good on the old detection metric
+of .5 IOU.
+
+
+ 
