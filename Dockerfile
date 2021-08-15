@@ -9,7 +9,7 @@ COPY . .
 
 WORKDIR .
 
-RUN wget https://pjreddie.com/media/files/yolov3.weights -P .var/data/
+RUN wget https://pjreddie.com/media/files/yolov3.weights -P ./var/data/
 
 EXPOSE 8501
 
