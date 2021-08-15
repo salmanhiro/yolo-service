@@ -6,15 +6,14 @@ RUN apt-get install 'ffmpeg'\
     'libsm6'\
     'libxext6'  -y
 
-    
+
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-RUN wget https://pjreddie.com/media/files/yolov3.weights -P ./model
 COPY . .
 
-
-
 WORKDIR .
+
+RUN wget https://pjreddie.com/media/files/yolov3.weights -P ./model
 
 EXPOSE 8501
 
