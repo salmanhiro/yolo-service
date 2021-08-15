@@ -73,8 +73,11 @@ def detect_objects(input_image):
         if i in indexes:
             x,y,w,h = bboxes[i]
             #To get the name of object
+
             label = str.upper((classes[class_ids[i]]))   
             color = colors[i]
+            if i >= 80:
+                color = colors[1]
             cv2.rectangle(img,(x,y),(x+w,y+h),color,3)     
             cv2.putText(img, label, (x-5,y-5), font, 
                    1, color, 1, cv2.LINE_AA)
