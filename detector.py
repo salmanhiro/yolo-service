@@ -13,7 +13,7 @@ def detect_objects(input_image):
     col1.pyplot(use_column_width=True)
 
     # Read weights and config
-    net = cv2.dnn.readNetFromDarknet("./model/yolov3.cfg", "./var/data/yolov3.weights")
+    net = cv2.dnn.readNetFromDarknet("./model/yolov3.cfg", "./model/yolov3.weights")
     net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
     # Load classes into different colors
     classes = []
@@ -29,7 +29,7 @@ def detect_objects(input_image):
     img = cv2.cvtColor(new_img,1)
     height,weight,ch = img.shape
     # detect image from cv2 blob
-    blob = cv2.dnn.blobFromImage(img, 1./255., (416,416), (0,0,0), swapRB = True, crop = False)   
+    blob = cv2.dnn.blobFromImage(img, 1./255, (416,416), (104, 117, 123), swapRB = False, crop = False)   
 
     net.setInput(blob)
     outs = net.forward(output_layers)

@@ -23,7 +23,7 @@ def object_main():
 
         if image_file is not None:
             our_image = Image.open(image_file)  
-            our_image = Image.resize(our_image, width=416)
+            
             detect_objects(our_image)
 
     else:
