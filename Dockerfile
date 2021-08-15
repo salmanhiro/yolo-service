@@ -1,12 +1,7 @@
 FROM python:3.8-slim-buster
 
 RUN apt-get update -y
-RUN apt install libgl1-mesa-glx -y
-RUN apt install 'ffmpeg'\
-    'libsm6'\
-    'wget'\
-    'libxext6'  -y\
-
+RUN apt install libgl1-mesa-glx wget -y
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
