@@ -9,7 +9,7 @@ COPY . .
 
 WORKDIR .
 
-RUN wget https://pjreddie.com/media/files/yolov3.weights -P /model
+RUN wget https://pjreddie.com/media/files/yolov3-tiny.weights -P /model
 
 EXPOSE 8501
 

@@ -29,7 +29,7 @@ def detect_objects(input_image):
     img = cv2.cvtColor(new_img,1)
     height,weight,ch = img.shape
     # detect image from cv2 blob
-    blob = cv2.dnn.blobFromImage(img, 1./255, (416,416), (104, 117, 123), swapRB = False, crop = False)   
+    blob = cv2.dnn.blobFromImage(img, 1./255, (320,320), [0, 0, 0], 1, crop = False)   
 
     net.setInput(blob)
     outs = net.forward(output_layers)
@@ -44,7 +44,7 @@ def detect_objects(input_image):
             scores = detection[5:]
             class_id = np.argmax(scores)  
             confidence = scores[class_id] 
-            if confidence > 0.5:   
+            if confidence > 0.3:   
                 # OBJECT DETECTED
                 #Get the coordinates of object: center,width,height  
                 center_x = int(detection[0] * weight)
